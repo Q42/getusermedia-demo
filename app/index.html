@@ -17,22 +17,24 @@
         <script src="scripts/vendor/modernizr.min.js"></script>
     </head>
     <body class="screen-border">
-    <div class="container">
-        <div class="hero-unit screen-main">
-
-                <div id="video-placeholder"></div>
-                <canvas id="target"></canvas>
-                <h1 class="title">Retrofy me</h1>
+    <div class="container White">
+      <div class="hero-unit screen-main">
+        <h1>GetUserMedia</h1>
+         <ul>
+             <li>
+               <a href="demo1.html">demo #1</a>
+             </li>
+             <li>
+               <a  href="demo2.html">demo #2</a>
+             </li>
+          </ul>
+        <div class="credits ">
+          by <a href="http://twitter.com/remcoder" >Remco Veldkamp</a> (<a href="http://q42.com">Q42</a>)
 
         </div>
+      </div>
 
-        <div class="credits">
-            <a href="#" class="create-snapshot"><span class="mirror"></span> create snapshot</a>
-            <br>
-            <br>
-            by <a href="http://twitter.com/remcoder" >Remco Veldkamp</a> (<a href="http://q42.com">Q42</a>)
 
-        </div>
     </div>
 
         <!--[if lt IE 7]>
@@ -41,48 +43,7 @@
 
         <!-- Add your site or application content here -->
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
-        <script src="scripts/webcam.js"></script>
-        <script src="components/retrofy/dist/jquery.retrofy.min.js"></script>
-        <script type="text/javascript">
 
-            // TODO: get WxH from webcam
-            Webcam.setSize(640, 480);
-
-            var $video = $(Webcam.getVideoElement())
-                .attr("title", "click to retrofy")
-                .hide();
-            $("#video-placeholder").replaceWith($video);
-
-            var $target = $("#target").attr("title", "click for original");
-            var size = Webcam.getSize();
-            $target[0].width = size.width;
-            $target[0].height = size.height;
-
-            var targetCtx = $target[0].getContext("2d");
-
-            $(".screen-main").click(function() {
-                console.log("toggle");
-                $video.toggle();
-                $target.toggle();
-            });
-            var context = new Context();
-            var retrofy = new Retrofy(context);
-            var d = new Retrofy.Dashboard(context);
-
-            Webcam.capture(function(imgData) {
-                retrofy.convertImageData(imgData);
-                targetCtx.putImageData(imgData,0,0);
-            });
-
-            function snapshot() {
-                window.open($target[0].toDataURL(), "_blank");
-            }
-
-            $(".create-snapshot").click(snapshot);
-
-        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

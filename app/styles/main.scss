@@ -4,7 +4,7 @@
 
 body {
     font-family: 'c64';
-    font-size: 10px;
+    font-size: 150%;
 }
 
 .screen-border {
@@ -12,17 +12,22 @@ body {
 }
 
 .container {
-    text-align: center;
+    xtext-align: center;
 }
 
 .screen-main {
-    display: inline-block;
+    display: block;
     background-color: $blue;
     margin: auto;
     position: relative;
     padding: 20px 40px;
+    width: 640px;
+    height: 480px;
 }
 
+a {
+    @extend .Cyan;
+}
 
 #video-placeholder {
     position: absolute;
@@ -37,15 +42,23 @@ body {
     bottom: 0;
     -webkit-user-select: none;
     -moz-user-select: none;
-    padding: 20px;
+    width: 640px;
 }
 
 .credits {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 16px;
+    a {
+        @extend .LightGreen;
+    }
 }
 
 .snapshot {
     position: absolute;
     bottom: 0;
     right:0;
+}
+
+.hidden  {
+    display: none;
 }
