@@ -22,17 +22,21 @@
     <div class="container">
       <div class="hero-unit screen-main">
           <h1 class="title" data-role="signal">We get signal!</h1>
-          <video data-role="source"></video>
+          <video class="mirror" data-role="video"></video>
           <div id="dest-placeholder"></div>
      </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="scripts/vendor/jquery.min.js"><\/script>')</script>
+    <script src="scripts/vendor/dat.gui.min.js"></script>
     <script src="components/dataroles.js/dataroles.min.js"></script>
+    <script src="scripts/dashboard.js"></script>
+
 
     <script type="text/javascript">
-        var video = $.findByRole("source")[0];
+        var $video = $.findByRole("video")
+            video = $video[0];
 
         navigator.getMedia = navigator.getUserMedia ||
           navigator.webkitGetUserMedia ||
@@ -54,6 +58,10 @@
         function onError(msg) {
           console.error(msg);
         }
+
+        // you can control settings via the dashboard
+        new Dashboard({ mirror : true });
+
     </script>
   </body>
 </html>
