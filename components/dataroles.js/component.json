@@ -1,0 +1,17 @@
+{
+  "name": "dataroles.js",
+  "version": "0.0.0",
+  "main": "./dataroles.js",
+  "dependencies": {
+    "jquery": ">=1.4.0"
+  },
+  "readme": "# dataroles.js\n_size: 0.5k (minified)_\n\nA little utility to attach behavior to the _data-role_ attribute more easily.\n\nSee [this blog post](http://blog.realstuffforabstractpeople.com/post/31753521367/classnames-for-styling-data-attributes-for-behavior) for some background information.\n\n## installation\nYou can install it easily with [yeoman]() or [bower](http://twitter.github.com/bower/):\n\n    yeoman install dataroles.js\n\nor\n\n    bower install dataroles.js\n\n## examples\n\n\n### find any element with the role 'show-alert':\n\n  `$.findByRole('show-alert')`\n\nis equivalent to:\n\n  `$(\"[data-role~='show-alert']\")`\n\n\n### finding elements by role in a given subtree\n\n  `$(\"body\").findByRole('show-alert')`\n\nis equivalent to\n\n  `$(\"body\").find(\"[data-role~='show-alert']\")`\n\n\n\n### wrappers for all standard traversal methods\n\n*   `parentsByRole('role')` -> `parents(\"[data-role~='role']\")`\n*   `siblingsByRole('role')` -> `siblings(\"[data-role~='role']\")`\n*   etc..\n\n[All standard jQuery traversal methods](http://api.jquery.com/category/traversing/) are wrapped like this.\n\n### check the data-role of an element\n`.hasRole(role)`\n\nis quivalent to `.is(\"[data-role~='role']\")`\n\n### multiple roles\nmultiple roles per data-role attribute are supported (uses the `~=` operator internally)\n\n",
+  "readmeFilename": "README.md",
+  "_id": "dataroles.js@0.0.1",
+  "description": "_size: 0.5k (minified)_",
+  "commit": "4f9621e195a24b763ebd712c6722007d1082beb6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/remcoder/dataroles.js.git"
+  }
+}

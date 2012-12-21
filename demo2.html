@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="styles/8992f488.c64.css">
+      <link rel="stylesheet" href="styles/23ce9a05.main.css">
+        <style>
+        .title {
+          color: white;
+          left: 91px;
+        }
+        video {
+          display: none;
+        }
+        </style>
+    <script src="scripts/vendor/cf69c6f2.modernizr.min.js"></script>
+  </head>
+  <body class="screen-border">
+    <div class="container">
+      <div class="hero-unit screen-main">
+          <h1 class="title" data-role="signal">Look at Hue!</h1>
+          <video data-role="source"></video>
+          <div id="dest-placeholder"></div>
+     </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/vendor/8bc61845.jquery.min.js"><\/script>')</script>
+    <script src="components/dataroles.js/dataroles.min.js"></script>
+
+    <script src="scripts/fa321efa.hsv.js"></script>
+          <script src="scripts/8d9dcdcb.webcam.js"></script>
+
+        <script type="text/javascript">
+            var $video = $( Webcam.getVideoElement() );
+            $("#source-placeholder").replaceWith($video);
+
+            var $target = $("<canvas>");
+            $("#dest-placeholder").replaceWith( $target );
+
+            Webcam.setSize(640, 480);
+
+            $target[0].width = 640;
+            $target[0].height = 480;
+
+            var targetCtx = $target[0].getContext("2d");
+
+            Webcam.capture(function(imgData) {
+                var pixels = imgData.data;
+                var h = Math.floor( +new Date /50 % 360 );
+
+                // filter
+                for (var i=0 ; i<pixels.length ; i+=4)
+                {
+                    var r = pixels[ i   ];
+                    var g = pixels[ i+1 ];
+                    var b = pixels[ i+2 ];
+
+                    var g = Math.round( r+g+b / 3 );
+
+                    // grey
+                    // pixels[ i ] = pixels[ i+1 ] = pixels[ i+2 ] = g;
+
+                    var rgb = hsv(h,1,g/255);
+                    // red
+                    pixels[ i   ] = rgb[0];
+
+                    // green
+                    pixels[ i+1 ] = rgb[1];
+
+                    // blue
+                    pixels[ i+2 ] = rgb[2];
+
+                }
+
+                targetCtx.putImageData(imgData,0,0);
+            });
+        </script>
+  </body>
+</html>

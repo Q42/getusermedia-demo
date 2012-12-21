@@ -1,0 +1,64 @@
+@import "c64.scss";
+/*@import "bootstrap.css";*/
+@import "tools.css";
+
+body {
+    font-family: 'c64';
+    font-size: 150%;
+}
+
+.screen-border {
+    background-color: $lightblue;
+}
+
+.container {
+    xtext-align: center;
+}
+
+.screen-main {
+    display: block;
+    background-color: $blue;
+    margin: auto;
+    position: relative;
+    padding: 20px 40px;
+    width: 640px;
+    height: 480px;
+}
+
+a {
+    @extend .Cyan;
+}
+
+#video-placeholder {
+    position: absolute;
+    background-image: url("../images/placeholder.png");
+    width: 640px;
+    height: 480px;
+}
+
+.title {
+    position: absolute;
+    color: $green;
+    bottom: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    width: 640px;
+}
+
+.credits {
+    position: absolute;
+    bottom: 16px;
+    a {
+        @extend .LightGreen;
+    }
+}
+
+.snapshot {
+    position: absolute;
+    bottom: 0;
+    right:0;
+}
+
+.hidden  {
+    display: none;
+}
