@@ -38,6 +38,7 @@ a {
 
 .title {
     position: absolute;
+    z-index: 1; // to force visibily when we set the video element to transform: rotateY(180deg)
     color: $green;
     bottom: 0;
     -webkit-user-select: none;

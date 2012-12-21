@@ -1,7 +1,7 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/tools\.scss}line{font-family:\000032}}
 .mirror {
-  display: inline-block;
-  -moz-transform: rotate(-180deg);
-  -webkit-transform: rotate(-180deg);
-  transform: rotate(-180deg);
+  xdisplay: inline-block;
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
