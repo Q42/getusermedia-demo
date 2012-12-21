@@ -1,0 +1,85 @@
+@font-face {
+  font-family: 'c64';
+  src: url("fonts/C64_Pro_v1.0-STYLE.eot");
+  src: url("fonts/C64_Pro_v1.0-STYLE.eot?#iefix") format("embedded-opentype"), url("fonts/C64_Pro_v1.0-STYLE.woff") format("woff"), url("fonts/C64_Pro_v1.0-STYLE.ttf") format("truetype");
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\000039}}
+.Black {
+  color: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000310}}
+.White {
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000311}}
+.Red {
+  color: #e04040;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000312}}
+.Cyan {
+  color: #60ffff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000313}}
+.Magenta {
+  color: #e060e0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000314}}
+.Green {
+  color: #40e040;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000315}}
+.Blue {
+  color: #4040e0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000316}}
+.Yellow {
+  color: #ffff40;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000317}}
+.Orange {
+  color: #e0a040;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000318}}
+.Brown {
+  color: #9c7448;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000319}}
+.Pink {
+  color: #faa0a0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000320}}
+.DarkGrey {
+  color: #545454;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000321}}
+.Grey {
+  color: #888888;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000322}}
+.LightGreen {
+  color: #a0ffa0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000323}}
+.LightBlue {
+  color: #a0a0ff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/remcoder\/projects\/getusermedia-demo\/master\/app\/styles\/c64\.scss}line{font-family:\0000324}}
+.LGrey {
+  color: silver;
+}
